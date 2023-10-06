@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Lynn Rest Api - Dashboard</title>
+        <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+        <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="vendors/owl-carousel-2/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg">
+        <link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+        <link rel="shortcut icon" href="https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg">
+        <link rel="stylesheet" href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+        <script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+        <meta name="description" content="Lynn Rest API">
+        <meta property="og:image" content="https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg">
+        <meta name="keywords" content="REST API">
+        <meta name="author" content="Lynnxha">
+    </head>
+    <body>
+        <body id="page-top" onload="getvisitor();">
+        <div class="container-scroller">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo rounded-circle" href="#" style="text-decoration: none">Lynn Rest Api</a>
+        <a class="sidebar-brand brand-logo-mini" href="#" style="text-decoration: none">Title</a>
+        </div>
+        <font face="Original Surfer">
+        <ul class="nav">
+        <li class="nav-item profile">
+            <div class="profile-desc">
+                <div class="profile-pic">
+                    <div class="count-indicator">
+                        <img class="img-xs rounded-circle " src="https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg" alt="">
+                        <span class="count bg-success"></span>
+                    </div>
+                    <div class="profile-name">
+                        <h5 class="mb-0 font-weight-normal">Kibieptr</h5>
+                        <span>Developer Newbie Puh :u</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item nav-category">
+            <span class="nav-link">Docs</span>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="#">
+                <span class="menu-icon">
+                    <i class="mdi mdi-home"></i>
+                </span>
+                <span class="menu-title">Home</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-anime" aria-expanded="false" aria-controls="ui-img-maker">
+                <span class="menu-icon">
+                    <i class="mdi mdi-folder-multiple-image"></i>
+                </span>
+                <span class="menu-title">Anime API</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <!--
+                Example add new navbar item.
+                siapa si yg coding berantakan bet.
+            -->
+            <div class="collapse" id="ui-anime">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/anoboy/search?query=&apikey=Your_Apikey?">Anoboy Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/anoboy/latest?apikey=Your_Apikey?">Anoboy Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/anoboy/detail?url=&apikey=Your_Apikey?">Anoboy Detail</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/otakudesu/search?query=&apikey=Your_Apikey?">Otakudesu Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/otakudesu/latest?apikey=Your_Apikey?">Otakudesu Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/otakudesu/detail?url=&apikey=Your_Apikey?">Otakudesu Detail </a>
+                    </li>
+                    <!-- bates cok -->
+                    <li class="nav-item">
+                    <a class="nav-link" href="api/anime/komiku/search?query=&apikey=Your_Apikey?">Komiku Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/komiku/latest?apikey=Your_Apikey?">Komiku Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/komiku/detail?url=&apikey=Your_Apikey?">Komiku Detail </a>
+                    </li>
+                    <!-- bates -->
+                    <li class="nav-item">
+                    <a class="nav-link" href="api/anime/doujindesu/search?query=&apikey=Your_Apikey?">Doujindesu Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/doujindesu/latest?apikey=Your_Apikey?">Doujindesu Latest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/doujindesu/detail?url=&apikey=Your_Apikey?">Doujindesu Detail </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/anime/kusonime?query=&apikey=Your_Apikey?">Kusonime</a>
+                    </li>
+                    <!-- wes -->
+                </ul>
+            </div>
+            <!--
+                Example add new navbar item
+            -->
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-asupan" aria-expanded="false" aria-controls="ui-img-maker">
+                <span class="menu-icon">
+                    <i class="mdi mdi-folder-multiple-image"></i>
+                </span>
+                <span class="menu-title">Asupan API</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-asupan">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/china?apikey=Your_Apikey?">China</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/vietnam?apikey=Your_Apikey?">Vietnam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/thailand?apikey=Your_Apikey?">Thailand </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/indonesia?apikey=Your_Apikey?">Indonesia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/korea?apikey=Your_Apikey?">Korea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/japan?apikey=Your_Apikey?">Japan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/asupan/malaysia?apikey=Your_Apikey?">Malaysia</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
+                <span class="menu-icon">
+                    <i class="mdi mdi-download"></i>
+                </span>
+                <span class="menu-title">Downloader API</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-downloader">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/soundcloud?url=&apikey=Your_Apikey?">SoundCloud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/mediafire?url=&apikey=Your_Apikey?">MediaFire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/zippyshare?url=&apikey=Your_Apikey?">Zippyshare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/tiktok?url=https://vt.tiktok.com/ZS82u2sDu/&apikey=Your_Apikey?">Tiktok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/facebook?url=https://www.facebook.com/reel/814574926298028?fs=e&s=cl&flite=scwspnss&apikey=Your_Apikey?">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/instagram?apikey=Your_Apikey?&url=https://www.instagram.com/reel/Cf1HZNvvGuM/?igshid=YmMyMTA2M2Y=">Instagram</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/pinterest?q=loli&apikey=Your_Apikey?">Pinterest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/ytmp3?url=https://youtu.be/THsiM3I7sLI&apikey=Your_Apikey?">YouTube Audio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"href="api/download/ytmp4?url=https://youtu.be/THsiM3I7sLI&apikey=Your_Apikey?">YouTube Video</a>
+                    </li>          
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-news" aria-expanded="false" aria-controls="ui-random">
+                <span class="menu-icon">
+                    <i class="mdi mdi-xing"></i>
+                </span>
+                <span class="menu-title">News API</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-news">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/news/cnn?apikey=Your_Apikey?">Cnn News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/news/cnbc?apikey=Your_Apikey?">CnBc News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/news/republika?apikey=Your_Apikey?">Republika News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/news/tempo?apikey=Your_Apikey?">Tempo News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api/news/antara?apikey=Your_Apikey?">Antara News</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="api/news/kumparan?apikey=Your_Apikey?">Kumparan News</a>
+                        </li>
+                    </ul>
+                    </div>
+                    </li>    
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-folder-image"></i>
+                            </span>
+                            <span class="menu-title">Photooxy API</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-photooxy">
+                            <ul class="nav flex-column sub-menu">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="api/photooxy/flaming?text=Zeltoria&apikey=Your_Apikey?">Flaming Text</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="api/photooxy/shadow-sky?text=Zeltoria&apikey=Your_Apikey?">Shadow text </a>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="api/photooxy/metallic?apikey=Your_Apikey?&text=Zeltoria">Metallic</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="api/photooxy/naruto?text=Zeltoria&apikey=Your_Apikey?">Naruto</a>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="api/photooxy/pubg-mobile?text=Zeltoria&text2=Gans&apikey=Your_Apikey?">Pubg mobile</a>
+                                                </ul>
+                                                </div>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" data-toggle="collapse" href="#ui-search" aria-expanded="false" aria-controls="ui-fun">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-emoticon-happy"></i>
+                                                        </span>
+                                                        <span class="menu-title">Search API</span>
+                                                        <i class="menu-arrow"></i>
+                                                    </a>
+                                                    <div class="collapse" id="ui-search">
+                                                        <ul class="nav flex-column sub-menu">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/search/google-image?query=loli&apikey=Your_Apikey?">Google Image</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/search/film?query=&apikey=Your_Apikey?">Film</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/search/soundcloudsearch?query=&apikey=Your_Apikey?">SoundCloud</a>
+                                                            </li>            
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/search/wallpaper?query=pemandangan Indonesia &apikey=Your_Apikey?">Wallpaper</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/search/pinterest?query=anime loli&apikey=Your_Apikey?">Pinterest</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>    
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" data-toggle="collapse" href="#ui-nsfw" aria-expanded="false" aria-controls="ui-tools">
+                                                        <span class="menu-icon">          	
+                                                            <i class="mdi mdi-wrench"></i>
+                                                        </span>
+                                                        <span class="menu-title">Nsfw API</span>
+                                                        <i class="menu-arrow"></i>
+                                                    </a>
+                                                    <div class="collapse" id="ui-nsfw">
+                                                        <ul class="nav flex-column sub-menu">
+                                                                                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/ahegao?apikey=Your_Apikey?">Ahegao</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/ass?apikey=Your_Apikey?">Ass</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/bdsm?apikey=Your_Apikey?">Bdsm</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/blowjob?apikey=Your_Apikey?">Blowjob</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/cosplay?apikey=Your_Apikey?">Cosplay</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/cuckold?&apikey=Your_Apikey?">CuckOld</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/cum?apikey=Your_Apikey?">Cum</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/ero?apikey=Your_Apikey?">Ero</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/fendom?apikey=Your_Apikey?">Fendom</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/foot?apikey=Your_Apikey?">Foot</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/gangbang?apikey=Your_Apikey?">Gangbang</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/glasses?apikey=Your_Apikey?">Glasses</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/jahy?apikey=Your_Apikey?">Jahy</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/manga?apikey=Your_Apikey?">Manga</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/masturbation?apikey=Your_Apikey?">Masturbation</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/orgy?apikey=Your_Apikey?">Orgy</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/pussy?apikey=Your_Apikey?">Pussy</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/nsfw/yuri?apikey=Your_Apikey?">Yuri</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>  
+
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" data-toggle="collapse" href="#ui-islamic" aria-expanded="false" aria-controls="ui-islamic">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-star"></i>
+                                                        </span>
+                                                        <span class="menu-title">Islamic API</span>
+                                                        <i class="menu-arrow"></i>
+                                                    </a>
+                                                    <div class="collapse" id="ui-islamic">
+                                                        <ul class="nav flex-column sub-menu">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/tahlil?apikey=Your_Apikey?">Tahlil</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/wirid?apikey=Your_Apikey?">Wirid</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/ayatkursi?apikey=Your_Apikey?">Ayat Kursi</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/doaharian?apikey=Your_Apikey?">Doa Harian</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/bacaanshalat?apikey=Your_Apikey?">Bacaan Shalat</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatshalat?apikey=Your_Apikey?">Niat Shalat</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/kisahnabi?apikey=Your_Apikey?">Kisah Nabi</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/asmaulhusna?apikey=Your_Apikey?">Asmaul Husna</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatsubuh?apikey=Your_Apikey?">Niat Subuh</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatzuhur?apikey=Your_Apikey?">Nist Zuhur</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatmagrib?apikey=Your_Apikey?">Niat Magrib</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatisya?apikey=Your_Apikey?">Niat Isya</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link"href="api/islam/niatashar?apikey=Your_Apikey?">Nist Ashar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>          
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" data-toggle="collapse" href="#ui-game" aria-expanded="false" aria-controls="ui-anime">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-cat"></i>
+                                                        </span>
+                                                        <span class="menu-title">Game API</span>
+                                                        <i class="menu-arrow"></i>
+                                                    </a>
+                                                    <div class="collapse" id="ui-game">
+                                                        <ul class="nav flex-column sub-menu">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="api/game/tebakgambar?apikey=Your_Apikey?">Tebak Gambar </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" data-toggle="collapse" href="#ui-oth" aria-expanded="false" aria-controls="ui-fun">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-emoticon-happy"></i>
+                                                        </span>
+                                                        <span class="menu-title">Other API</span>
+                                                        <i class="menu-arrow"></i>
+                                                    </a>
+                                                    <div class="collapse" id="ui-oth">
+                                                        <ul class="nav flex-column sub-menu">										
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/other/github-stalk?username=Zeltoria&apikey=Your_Apikey?">Github Stalk</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/other/hilih?kata=Zeltoria&apikey=Your_Apikey?">Hilih</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/other/kodepos?kota=Sinjai&apikey=Your_Apikey?">Kodepos</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/other/covid-world?apikey=Your_Apikey?">Covid Global</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="/api/other/kbbi?kata=jamu&apikey=Your_Apikey?">Kbbi</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>    
+                                                <li class="nav-item nav-category">
+                                                    <span class="nav-link">Contact Me</span>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" href="https://github.com/Lynnxha">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-github-circle"></i>
+                                                        </span>
+                                                        <span class="menu-title">Github</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" href="https://wa.me/6287739924485">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-whatsapp"></i>
+                                                        </span>
+                                                        <span class="menu-title">WhatsApp</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" href="https://wa.me/6287739924485">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-star"></i>
+                                                        </span>
+                                                        <span class="menu-title">Donasi</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item menu-items">
+                                                    <a class="nav-link" href="https://instagram.com/kibieptr_">
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-instagram"></i>
+                                                        </span>
+                                                        <span class="menu-title">Instagram</span>
+                                                    </a>
+                                                </li>
+        </ul>
+        </font>
+        </nav>
+<div class="container-fluid page-body-wrapper">
+    <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href="#">
+                <big>
+                    <i class="mdi mdi-biohazard text-primary"></i>
+                </big>
+            </a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="mdi mdi-menu"></span>
+            </button>   
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-100">
+                    <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex ">
+                        <input type="text" class="form-control" placeholder="Lynn Rest Api">
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-settings d-none d-lg-block">
+                    <a class="nav-link" href="#">
+                        <i class="mdi mdi-view-grid"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown border-left">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                        <i class="mdi mdi-bell"></i>
+                        <span class="count bg-danger"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                        <h6 class="p-3 mb-0">Info New Update</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-dark rounded-circle">
+                                    <i class="mdi mdi-calendar text-success"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content">
+                                <p class="preview-subject mb-1">Change Template</p>
+                                <p class="text-muted ellipsis mb-0"> New Template</p>
+                            </div>
+                        </a>
+                    </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                                <div class="navbar-profile">
+                                    <img class="img-xs rounded-circle" src="https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg" alt="">
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Lynn Rest Api</p>
+                                </div>
+                            </a>
+                        </li>
+</ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                            <span class="mdi mdi-format-line-spacing"></span>
+                        </button>
+                    </div>
+</nav>
+                    <div class="main-panel">
+                        <div class="content-wrapper">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="font-weight-bold text-danger text-uppercase">IP Address</h5>
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center align-self-start">
+                                                        <h5 class="mb-0" id="ip">Waiting...</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="icon icon-box-success">
+                                                        <span class="mdi mdi-access-point-network icon-item"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <font face="Original Surfer" class="text-muted font-weight-normal">Your IP Address</font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="font-weight-bold text-info text-uppercase">Date</h5>
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center align-self-start">
+                                                        <h5 class="mb-0" id="tanggal">Waiting...</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="icon icon-box-success ">
+                                                        <span class="mdi mdi-calendar icon-item"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <font face="Original Surfer" class="text-muted font-weight-normal">Date Now</font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="font-weight-bold text-success text-uppercase">Clock</h5>
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center align-self-start">
+                                                        <h5 class="mb-0" id="Clock">Waiting...</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="icon icon-box-success ">
+                                                        <span class="mdi mdi-clock icon-item"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <font face="Original Surfer" class="text-muted font-weight-normal" id="Ucapan">Ucapan</font>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="font-weight-bold text-info text-uppercase">Road To New Year</h6>
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center align-self-start">
+                                                        <h5 class="mb-0" id="NewYear">Waiting...</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="icon icon-box-success ">
+                                                        <span class="mdi mdi-star icon-item"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <font face="Original Surfer" class="text-muted font-weight-normal">Menuju Tahun baru</font>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="/api/cekapikey">
+                                <div class="card card-round mt-5 stretch-card grid-margin">
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h4 class="m-0 font-weight-bold text-warning">CEK APIKEY</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="status" style="font-size: 17px;"></p>
+                                        <div class="form-group">
+                                            <input class="form-control font-weight-bold text-center" type="text" placeholder="Masukkan Apikey" name="apikey" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>
+                                                <span class="font-weight-bold">Submit</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-5404310597803049" data-ad-slot="6657550061"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div>                                                                             
+        </footer>
+        </div>
+        </div>
+    </div>
+    <script>
+      swal({
+        title: 'Welcome To Lynn Rest Api',
+        text: 'Kalau Error Hubungin Whatsapp Saya',
+        imageUrl: 'https://telegra.ph/file/f7d94892b32cdb66f4d36.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Lynnxha',
+        animation: true
+      })
+    </script>
+			<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>   
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/Zeltoria.js"></script>
+</html>

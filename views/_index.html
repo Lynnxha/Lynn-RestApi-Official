@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Rest Api - Zeltoria</title>
+		<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
+		<link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+		<link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css" />
+		<link rel="stylesheet" href="vendors/owl-carousel-2/owl.carousel.min.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Original+Surfer&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="vendors/owl-carousel-2/owl.theme.default.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+		/>
+		<link
+			rel="stylesheet"
+			href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css"
+		/>
+		<link
+			rel="shortcut icon"
+			href="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+		/>
+		<link
+			rel="stylesheet"
+			href="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css"
+		/>
+		<script src="ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+		<meta name="description" content="Zeltoria - API" />
+		<meta
+			property="og:image"
+			content="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+		/>
+		<meta property="og:site_name" content="EKA PI" />
+		<meta name="keywords" content="REST API" />
+		<meta name="author" content="Zeltoria" />
+	</head>
+	<body id="page-top" onload="getvisitor();">
+		<div class="container-scroller">
+			<nav class="sidebar sidebar-offcanvas" id="sidebar">
+				<div
+					class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top"
+				>
+					<a class="sidebar-brand brand-logo rounded-circle" href="#"
+						><img src="images/logo1.png" alt="logo"
+					/></a>
+					<a class="sidebar-brand brand-logo-mini" href="#"
+						><img src="images/logo1.png" class="rounded-circle" alt="logo"
+					/></a>
+				</div>
+				<ul class="nav">
+					<li class="nav-item profile">
+						<div class="profile-desc">
+							<div class="profile-pic">
+								<div class="count-indicator">
+									<font face="Original Surfer"
+										><img
+											class="img-xs rounded-circle"
+											src="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+											alt="3a4cd2e2d86cac6805abb"
+									/></font>
+								</div>
+								<div class="profile-name">
+									<h5 class="mb-0 font-weight-normal">
+										<font face="Original Surfer">Zeltoria</font>
+									</h5>
+									<font face="Original Surfer"
+										><span>Nothing Special</span></font
+									>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item nav-category">
+						<font face="Original Surfer"
+							><span class="nav-link">Docs</span></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a class="nav-link" href="#"
+								><span class="menu-title">Home</span></a
+							></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-cecan"
+								aria-expanded="false"
+								aria-controls="ui-img-maker"
+								><span class="menu-title">Anime API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-cecan">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/anime/otakudesu/search?query=&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Otakudesu Search</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/anime/otakudesu/latest?apikey=Ngapain?"
+										><font face="Original Surfer">Otakudesu Latest</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/anime/otakudesu/detail?url=&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Otakudesu Detail</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-cecan"
+								aria-expanded="false"
+								aria-controls="ui-img-maker"
+								><span class="menu-title">Cecan API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-cecan">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/china?apikey=Ngapain?"
+										><font face="Original Surfer">China</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/vietnam?apikey=Ngapain?"
+										><font face="Original Surfer">Vietnam</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/thailand?apikey=Ngapain?"
+										><font face="Original Surfer">Thailand</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/indonesia?apikey=Ngapain?"
+										><font face="Original Surfer">Indonesia</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/korea?apikey=Ngapain?"
+										><font face="Original Surfer">Korea</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/japan?apikey=Ngapain?"
+										><font face="Original Surfer">Japan</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/cecan/malaysia?apikey=Ngapain?"
+										><font face="Original Surfer">Malaysia</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-downloader"
+								aria-expanded="false"
+								aria-controls="ui-downloader"
+								><span class="menu-title">Downloader API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-downloader">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/tiktok?url=https://vt.tiktok.com/ZS82u2sDu/&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Tiktok Downloader</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/facebook?url=https://www.facebook.com/reel/814574926298028?fs=e&amp;s=cl&amp;flite=scwspnss&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Facebook Downloader</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/instagram?apikey=Ngapain?&amp;url=https://www.instagram.com/reel/Cf1HZNvvGuM/?igshid=YmMyMTA2M2Y="
+										><font face="Original Surfer">Instagram Downloader</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/pinterest?q=loli&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Pinterest</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/ytmp3?url=https://youtu.be/THsiM3I7sLI&amp;apikey=Ngapain?"
+										><font face="Original Surfer">YouTube Audio</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/download/ytmp4?url=https://youtu.be/THsiM3I7sLI&amp;apikey=Ngapain?"
+										><font face="Original Surfer">YouTube Video</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-news"
+								aria-expanded="false"
+								aria-controls="ui-random"
+								><span class="menu-title">News API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-news">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/cnn?apikey=Ngapain?"
+										><font face="Original Surfer">Cnn News</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/cnbc?apikey=Ngapain?"
+										><font face="Original Surfer">CnBc News</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/republika?apikey=Ngapain?"
+										><font face="Original Surfer">Republika News</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/tempo?apikey=Ngapain?"
+										><font face="Original Surfer">Tempo News</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/antara?apikey=Ngapain?"
+										><font face="Original Surfer">Antara News</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/news/kumparan?apikey=Ngapain?"
+										><font face="Original Surfer">Kumparan News</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-photooxy"
+								aria-expanded="false"
+								aria-controls="ui-photooxy"
+								><span class="menu-title">Photooxy API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-photooxy">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/photooxy/flaming?text=Zeltoria&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Flaming Text</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/photooxy/shadow-sky?text=Zeltoria&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Shadow text</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/photooxy/metallic?apikey=Ngapain?&amp;text=Zeltoria"
+										><font face="Original Surfer">Metallic</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/photooxy/naruto?text=Zeltoria&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Naruto</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/photooxy/pubg-mobile?text=Zeltoria&amp;text2=Gans&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Pubg mobile</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-search"
+								aria-expanded="false"
+								aria-controls="ui-fun"
+								><span class="menu-title">Search API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-search">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/search/google-image?query=loli&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Google Image</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/search/wallpaper?query=pemandangan%20Indonesia%20&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Wallpaper</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/search/pinterest?query=anime%20loli&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Pinterest</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-nsfw"
+								aria-expanded="false"
+								aria-controls="ui-tools"
+								><span class="menu-title">Nsfw API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-nsfw">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="api/nsfw/ass?apikey=Ngapain?"
+										><font face="Original Surfer">Ass</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/nsfw/ahegao?apikey=Ngapain?"
+										><font face="Original Surfer">Ahegao</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/nsfw/bdsm?apikey=Ngapain?"
+										><font face="Original Surfer">Bdsm</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/nsfw/blowjob?apikey=Ngapain?"
+										><font face="Original Surfer">Blowjob</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/nsfw/cuckold?&amp;apikey=Ngapain?"
+										><font face="Original Surfer">CuckOld</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-islamic"
+								aria-expanded="false"
+								aria-controls="ui-islamic"
+								><span class="menu-title">Islamic API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-islamic">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/tahlil?apikey=Ngapain?"
+										><font face="Original Surfer">Tahlil</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/wirid?apikey=Ngapain?"
+										><font face="Original Surfer">Wirid</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/ayatkursi?apikey=Ngapain?"
+										><font face="Original Surfer">Ayat Kursi</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/doaharian?apikey=Ngapain?"
+										><font face="Original Surfer">Doa Harian</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/islam/bacaanshalat?apikey=Ngapain?"
+										><font face="Original Surfer">Bacaan Shalat</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/islam/niatshalat?apikey=Ngapain?"
+										><font face="Original Surfer">Niat Shalat</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/kisahnabi?apikey=Ngapain?"
+										><font face="Original Surfer">Kisah Nabi</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/islam/asmaulhusna?apikey=Ngapain?"
+										><font face="Original Surfer">Asmaul Husna</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/niatsubuh?apikey=Ngapain?"
+										><font face="Original Surfer">Niat Subuh</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/niatzuhur?apikey=Ngapain?"
+										><font face="Original Surfer">Nist Zuhur</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/islam/niatmagrib?apikey=Ngapain?"
+										><font face="Original Surfer">Niat Magrib</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/niatisya?apikey=Ngapain?"
+										><font face="Original Surfer">Niat Isya</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="api/islam/niatashar?apikey=Ngapain?"
+										><font face="Original Surfer">Nist Ashar</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-game"
+								aria-expanded="false"
+								aria-controls="ui-anime"
+								><span class="menu-title">Game API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-game">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="api/game/tebakgambar?apikey=Ngapain?"
+										><font face="Original Surfer">Tebak Gambar</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a
+								class="nav-link"
+								data-toggle="collapse"
+								href="#ui-oth"
+								aria-expanded="false"
+								aria-controls="ui-fun"
+								><span class="menu-title">Other API</span></a
+							></font
+						>
+						<div class="collapse" id="ui-oth">
+							<ul class="nav flex-column sub-menu">
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/other/github-stalk?username=Zeltoria&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Github Stalk</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/other/hilih?kata=Zeltoria&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Hilih</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/other/kodepos?kota=Sinjai&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Kodepos</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/other/covid-world?apikey=Ngapain?"
+										><font face="Original Surfer">Covid Global</font></a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="/api/other/kbbi?kata=jamu&amp;apikey=Ngapain?"
+										><font face="Original Surfer">Kbbi</font></a
+									>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item nav-category">
+						<font face="Original Surfer"
+							><span class="nav-link">Contact Me</span></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a class="nav-link" href="https://github.com/Zeltoria"
+								><span class="menu-title">Github</span></a
+							></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a class="nav-link" href="https://wa.me/6285776353741"
+								><span class="menu-title">WhatsApp</span></a
+							></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a class="nav-link" href="https://wa.me/6285776353741"
+								><span class="menu-title">Donasi</span></a
+							></font
+						>
+					</li>
+					<li class="nav-item menu-items">
+						<font face="Original Surfer"
+							><a class="nav-link" href="https://instagram.com/danilelistz02"
+								><span class="menu-title">Instagram</span></a
+							></font
+						>
+					</li>
+				</ul>
+			</nav>
+			<div class="container-fluid page-body-wrapper">
+				<nav class="navbar p-0 fixed-top d-flex flex-row">
+					<div
+						class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center"
+					>
+						<a class="navbar-brand brand-logo-mini" href="#"></a>
+					</div>
+					<div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+						<ul class="navbar-nav w-100">
+							<li class="nav-item w-100">
+								<form class="nav-link mt-2 mt-md-0 d-none d-lg-flex">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Zeltoria APIs"
+									/>
+								</form>
+							</li>
+						</ul>
+						<ul class="navbar-nav navbar-nav-right">
+							<li class="nav-item nav-settings d-none d-lg-block">
+								<a class="nav-link" href="#"></a>
+							</li>
+							<li class="nav-item dropdown border-left">
+								<a
+									class="nav-link count-indicator dropdown-toggle"
+									id="notificationDropdown"
+									href="#"
+									data-toggle="dropdown"
+								></a>
+								<div
+									class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+									aria-labelledby="notificationDropdown"
+								>
+									<h6 class="p-3 mb-0">Info New Update</h6>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item preview-item">
+										<div class="preview-thumbnail">
+											<div class="preview-icon bg-dark rounded-circle"></div>
+										</div>
+										<div class="preview-item-content">
+											<p class="preview-subject mb-1">Change Template</p>
+											<p class="text-muted ellipsis mb-0">
+												New Template & Update Fitur
+											</p>
+										</div></a
+									>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link"
+									id="profileDropdown"
+									href="#"
+									data-toggle="dropdown"
+								>
+									<div class="navbar-profile">
+										<img
+											class="img-xs rounded-circle"
+											src="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+											alt="3a4cd2e2d86cac6805abb"
+										/>
+										<p class="mb-0 d-none d-sm-block navbar-profile-name">
+											Zeltoria
+										</p>
+									</div></a
+								>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="main-panel">
+					<div class="content-wrapper">
+						<div class="row">
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="font-weight-bold text-danger text-uppercase">
+											IP Address
+										</h5>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<h3 class="mb-0" id="ip">Waiting...</h3>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											>Your IP Address</font
+										>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h6 class="font-weight-bold text-info text-uppercase">
+											Your Battery
+										</h6>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<span id="batteryLevel"></span>
+													<h3 class="mb-0" id="percentageLevel">Waiting...</h3>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											>Percentase Your Battery</font
+										>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="font-weight-bold text-success text-uppercase">
+											Visitor
+										</h5>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<h3 class="mb-0" id="visits">Waiting...</h3>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											>Visit Web</font
+										>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="font-weight-bold text-info text-uppercase">
+											Date
+										</h5>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<h4 class="mb-0" id="tanggal">Waiting...</h4>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											>Date Now</font
+										>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="font-weight-bold text-success text-uppercase">
+											Clock
+										</h5>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<h4 class="mb-0" id="Clock">Waiting...</h4>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											id="Ucapan"
+											>Ucapan</font
+										>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h6 class="font-weight-bold text-info text-uppercase">
+											Road To New Year
+										</h6>
+										<div class="row">
+											<div class="col-9">
+												<div class="d-flex align-items-center align-self-start">
+													<h5 class="mb-0" id="IdulAdha">Waiting...</h5>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="icon icon-box-success"></div>
+											</div>
+										</div>
+										<font
+											face="Original Surfer"
+											class="text-muted font-weight-normal"
+											>Menuju Tahun baru</font
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form action="/api/cekapikey">
+							<div class="card card-round mt-5 stretch-card grid-margin">
+								<div
+									class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+								>
+									<h4 class="m-0 font-weight-bold text-warning"></h4>
+									<i>CEK APIKEY</i>
+								</div>
+								<div class="card-body">
+									<p class="status" style="font-size: 17px"></p>
+									<div class="form-group">
+										<i
+											><input
+												class="form-control font-weight-bold text-center"
+												type="text"
+												placeholder="Masukkan Apikey"
+												name="apikey"
+												required=""
+										/></i>
+									</div>
+									<div class="form-group">
+										<center>
+											<i
+												><button
+													type="submit"
+													class="btn btn-primary content-justify-center"
+												>
+													<i><span class="font-weight-bold">Submit</span></i>
+												</button></i
+											>
+										</center>
+									</div>
+								</div>
+							</div>
+						</form>
+						<ins
+							class="adsbygoogle"
+							style="display: block"
+							data-ad-format="fluid"
+							data-ad-layout-key="-gw-3+1f-3d+2z"
+							data-ad-client="ca-pub-5404310597803049"
+							data-ad-slot="6657550061"
+						></ins>
+						<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						<div class="row">
+							<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<div class="mt-3 btn btn-outline-danger bg-transparent">
+											<div
+												id="demo"
+												class="alert btn btn-outline-danger"
+												role="alert"
+											>
+												<span id="Statistic">Waiting...</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<img
+											src="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg"
+											alt="Zeltoria"
+											class="logo img-fluid rounded mx-auto d-block mb-4"
+										/>
+										<h6 class="m-0 font-weight-bold text-primary">
+											Information
+										</h6>
+										<h6>
+											<br />
+											Rest Api Ini Free, Silahkan Di Pake Dengan Bijak.<br />
+											<br />
+											Apikey Nya? <font color="red">CariSendiri</font><br />
+											Jika Menemukan Bug/Error Nggak Usah Lapor
+											<a href="https://wa.me/6285776353741">Owner</a>
+										</h6>
+										<footer class="footer">
+											<div
+												class="d-sm-flex justify-content-center justify-content-sm-between"
+											>
+												<div class="bg-dark btn btn-block btn-outline-danger">
+													<font
+														face="Original Surfer"
+														class="text-muted d-block text-center text-sm-left d-sm-inline-block"
+														>Copyright ©
+														<span id="Years">00</span> Zeltoria</font
+													>
+												</div>
+											</div>
+										</footer>
+									</div>
+								</div>
+							</div>
+							<script>
+								swal({
+									title: "Welcome To Rest Api Zeltoria",
+									text: "Kalau Error Fix Sendiri",
+									imageUrl: "https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg",
+									imageWidth: 200,
+									imageHeight: 200,
+									imageAlt: "Nexagone",
+									animation: true,
+								});
+							</script>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+							<script src="vendors/js/vendor.bundle.base.js"></script>
+							<script src="vendors/owl-carousel-2/owl.carousel.min.js"></script>
+							<script src="js/off-canvas.js"></script>
+							<script src="js/hoverable-collapse.js"></script>
+							<script src="js/misc.js"></script>
+							<script src="js/settings.js"></script>
+							<script src="js/todolist.js"></script>
+							<script src="js/dashboard.js"></script>
+							<script src="js/Zeltoria.js"></script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

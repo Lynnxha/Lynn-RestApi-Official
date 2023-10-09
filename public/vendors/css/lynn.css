@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Source, sans-serif;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preloader .spinner {
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+/* Animation for the spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.text .status {
+  position: relative;
+  animation: animetop 0.8s;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1em;
+  cursor: pointer;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+div.desc h2 {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  word-wrap: break-word;
+  font: inherit;
+  letter-spacing: 4px;
+  text-align: center;
+  vertical-align: baseline;
+  margin-top: 45px;
+}
+
+div.text .desc {
+  position: relative;
+  animation: animetop 0.8s;
+}
+
+div.text .readdocs {
+  position: relative;
+  animation: animebot 0.8s;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.text img {
+  animation: animebot 1s ease-in-out;
+}
+
+@keyframes animetop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animebot {
+  0% {
+    top: 200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.15em;
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+a.sosmed {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.typed-text {
+  color: #0f0;
+}
+
+.cursor {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+hr {
+  margin: 10px auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  height: 2px;
+}
+
+div.bottom {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.text {
+    text-align: center;
+    width: 80%; /* Atur lebar sesuai kebutuhan Anda */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  div.desc h2 {
+    font-size: 0.7em;
+    margin-top: 20px;
+  }
+
+  div.text .readdocs {
+    margin-top: 20px;
+  }
+
+  .text img {
+    width: 80px;
+    height: 80px;
+  }
+}

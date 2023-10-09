@@ -23,6 +23,7 @@ const { getBuffer } = require(__path + "/lib/functions.js");
 const oxy = require(__path + "/lib/oxy.js");
 
 var { Vokal, Base, Searchnabi, Gempa } = require("./../lib");
+const { next } = require("cheerio/lib/api/traversing.js");
 
 _ = require("lodash");
 
@@ -71,7 +72,9 @@ var randomTextNumber =
 /** @note
  * Liat cara nulis code yang bener
  */
+// Anime Api
 
+// Asupan Api
 router.get("/asupan/china", async (req, res, next) => {
   var apikey = req.query.apikey;
   if (!apikey) return res.json(loghandler.noapikey);

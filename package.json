@@ -1,12 +1,16 @@
 {
-  "name": "lynnrestapi",
-  "version": "1.0.0",
-  "description": "Rest api Project v2",
+  "name": "api-mirip-zeks",
+  "version": "2.0.0",
+  "description": "Rest api update by Zeeoneofc",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "lint:check": "eslint",
     "lint:fix": "eslint views/*.html --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeeone-ofc/api-mirip-zeks.git"
   },
   "keywords": [
     "botwa",
@@ -14,10 +18,14 @@
     "api",
     "rest",
     "api",
-    "website"
+    "website",
+    "api-mirip-zeks"
   ],
-  "author": "Lynnxha",
+  "author": "Zeeoneofc",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeeone-ofc/api-mirip-zeks/issues"
+  },
   "dependencies": {
     "@bochilteam/scraper": "^4.0.22-alpha.0",
     "@xct007/frieren-scraper": "^0.0.1",
@@ -29,7 +37,7 @@
     "caliph-api": "^1.0.0",
     "cfonts": "^2.9.1",
     "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.5",
+    "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
@@ -54,8 +62,5 @@
     "@html-eslint/eslint-plugin": "^0.17.1",
     "@html-eslint/parser": "^0.17.1",
     "eslint": "^8.36.0"
-  },
-  "directories": {
-    "lib": "lib"
   }
 }

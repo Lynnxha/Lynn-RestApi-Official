@@ -8,7 +8,7 @@
 </p>
 
 
-Sebuah Project Rest API Sederhana Berbasis Javascript Digunakan Untuk Kebutuhan Bot Whatsapp, Etc.
+Sebuah Project Rest API Sederhana Berbasis Javascript Digunakan Untuk Kebutuhan Pengembangan Aplikasi Kalian.
 
 ### Built With
 

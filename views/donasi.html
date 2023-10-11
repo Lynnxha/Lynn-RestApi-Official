@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Donations</title>
+    <style>
+      /* CSS lainnya... */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 0.5em;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 2em auto; /* Ubah margin agar berada di tengah */
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+      }
+
+      .popup img {
+        max-width: 90%;
+        max-height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      footer {
+        background-color: #f0f0f0;
+        color: rgb(105, 105, 105);
+        text-align: center;
+        padding: 5px; /* Mengurangi padding untuk mengkecilkan footer */
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Donation</h1>
+    </header>
+    <div class="container">
+      <p>
+        Terima kasih atas keinginan Anda untuk mendukung kami melalui donasi.
+        Anda dapat melakukan donasi dengan menggunakan QRIS (Quick Response Code
+        Indonesian Standard) berikut:
+      </p>
+
+      <img
+        src="images/LynnQris.png"
+        alt="QR Code Donasi"
+        style="width: 200px; cursor: pointer"
+        id="qrisImage"
+      />
+
+      <p>
+        Silakan gunakan aplikasi pembayaran digital Anda untuk memindai QR Code
+        di atas dan lakukan donasi sesuai dengan kemampuan Anda. Donasi Anda
+        akan sangat bermanfaat untuk mendukung program-program kami.
+      </p>
+
+      <p>Terima kasih atas dukungan Anda!</p>
+    </div>
+    <!-- Tutup div container -->
+    <footer>
+      <p>&copy; 2023 Nama Organisasi. All rights reserved.</p>
+    </footer>
+    <script>
+      const qrisImage = document.getElementById("qrisImage");
+      const popup = document.createElement("div");
+      const popupImage = new Image();
+
+      // Atur gambar dan popup
+      popupImage.src = "images/LynnQris.png";
+      popupImage.alt = "QR Code Donasi";
+
+      // Tambahkan gambar ke dalam popup
+      popup.appendChild(popupImage);
+
+      // Tambahkan class untuk styling popup
+      popup.className = "popup";
+
+      // Tambahkan popup ke dalam body
+      document.body.appendChild(popup);
+
+      // Tambahkan event listener untuk menampilkan popup ketika gambar diklik
+      qrisImage.addEventListener("click", function () {
+        popup.style.display = "block";
+      });
+
+      // Tambahkan event listener untuk menyembunyikan popup ketika popup di klik
+      popup.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

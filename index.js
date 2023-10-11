@@ -18,6 +18,9 @@ app.get("/", (req, res) => {
 app.get("/docs", (req, res) => {
   res.sendFile(__path + "/views/index.html");
 });
+app.get("/donasi", (req, res) => {
+  res.sendFile(__path + "/views/donasi.html");
+});
 
 app.use("/api", apirouter);
 

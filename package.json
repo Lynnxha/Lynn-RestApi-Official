@@ -1,7 +1,7 @@
 {
-  "name": "api-mirip-zeks",
+  "name": "lynn-rest-api",
   "version": "2.0.0",
-  "description": "Rest api update by Zeeoneofc",
+  "description": "Rest api Project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -55,12 +55,16 @@
     "request": "^2.88.2",
     "spinnies": "^0.5.1",
     "ssl-express-www": "^3.0.7",
-    "urlencode": "^1.1.0"
+    "urlencode": "^1.1.0",
+    "tiktok-scraper": "^1.4.36"
   },
   "homepage": "https://github.com/zeeone-ofc/api-mirip-zeks#readme",
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.17.1",
     "@html-eslint/parser": "^0.17.1",
     "eslint": "^8.36.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

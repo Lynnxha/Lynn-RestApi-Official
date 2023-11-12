@@ -7,7 +7,7 @@
   <h3 align="center">Lynn Rest API Project V2</h3>
 </p>
 
-### E-Perpus
+### Lynn Rest API Project V2
 
 Sebuah Project Rest API Sederhana Berbasis Javascript Digunakan Untuk Kebutuhan Aplikasi Anda.
 

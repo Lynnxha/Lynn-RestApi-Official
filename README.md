@@ -7,8 +7,9 @@
   <h3 align="center">Lynn Rest API Project V2</h3>
 </p>
 
+### E-Perpus
 
-Sebuah Project Rest API Sederhana Berbasis Javascript Digunakan Untuk Kebutuhan Pengembangan Aplikasi Kalian.
+Sebuah Project Rest API Sederhana Berbasis Javascript Digunakan Untuk Kebutuhan Bot Whatsapp, Etc.
 
 ### Built With
 

@@ -1,6 +1,6 @@
 const express = require("express");
 (cors = require("cors")), (secure = require("ssl-express-www"));
-const PORT = process.env.PORT || 8080 || 5000 || 3000;
+const PORT = process.env.PORT || 3050 || 1020 || 4050;
 var { color } = require("./lib/color.js");
 
 var apirouter = require("./routes/api");
